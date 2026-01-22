@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Cleaners</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  
+    
+    <style>
+        body {
+      font-family: 'Inter', sans-serif;
+    }
+  .dropdown-item {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .dropdown-item:hover {
+    background-color: #f3f4f6;
+  }
+</style>
+
+
+  
+</head>
+
+<body class="text-gray-900">
+
+<!-- HEADER -->
+<!-- HEADER -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+  <!-- LOGO -->
+<img src="logo.jpeg" alt="Universal Cleaners Logo" class="h-14 md:h-16 w-auto">
+
+    <!-- NAV -->
+    <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+
+      <!-- SERVICES -->
+<div class="relative" id="servicesWrapper">
+  <button id="servicesBtn"
+    class="flex items-center gap-1 hover:text-blue-600 focus:outline-none">
+    Services
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </button>
+
+  <!-- SERVICES DROPDOWN -->
+  <div id="servicesDropdown"
+    class="absolute left-0 mt-4 w-80 bg-white border border-gray-200 rounded-xl shadow-xl hidden z-50">
+
+    <div class="py-3 max-h-[500px] overflow-y-auto">
+
+      <p class="px-4 pb-2 text-sm font-semibold text-gray-500">Cleaning Services</p>
+      <a href="#" class="dropdown-item">Deep cleaning</a>
+      <a href="#" class="dropdown-item">Curtain cleaning</a>
+      <a href="#" class="dropdown-item">Carpet cleaning</a>
+      <a href="#" class="dropdown-item">Cabros cleaning</a>
+      <a href="#" class="dropdown-item">Tiles cleaning</a>
+      <a href="#" class="dropdown-item">Kitchen cleaning</a>
+      <a href="#" class="dropdown-item">Drive way cleaning</a>
+      <a href="#" class="dropdown-item">Fumigation</a>
+      <a href="#" class="dropdown-item">Pest control</a>
+      <a href="#" class="dropdown-item">Toilet bowl & sink</a>
+      <a href="#" class="dropdown-item">Seat cleaning</a>
+      <a href="#" class="dropdown-item">Mattress cleaning</a>
+      <a href="#" class="dropdown-item">Window cleaning</a>
+
+      <p class="px-4 pt-4 pb-2 text-sm font-semibold text-gray-500">Laundry</p>
+      <a href="#" class="dropdown-item">Laundry</a>
+      <a href="#" class="dropdown-item">Dry cleaning services</a>
+      <a href="#" class="dropdown-item">Wash & fold</a>
+      <a href="#" class="dropdown-item">Ironing</a>
+      <a href="#" class="dropdown-item">Cloth alterations</a>
+      <a href="#" class="dropdown-item">Curtain steaming</a>
+
+      <p class="px-4 pt-4 pb-2 text-sm font-semibold text-gray-500">Moving Services</p>
+      <a href="#" class="dropdown-item">
+        Professional moving services for your home or office
+      </a>
+    </div>
+  </div>
+</div>
+
+        <a href="#" class="hover:text-blue-600">Blog</a>
+
+     <a href="#" class="hover:text-blue-600">About Us</a>
+      <a href="#" class="hover:text-blue-600">Booking</a>
+            <a href="#" class="hover:text-blue-600">Contact Us</a>
+
+    </nav>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex items-center space-x-6">
+
+<!-- ACCOUNT -->
+<div class="relative" id="accountWrapper">
+  <button id="accountBtn"
+    class="flex items-center gap-1 hover:text-blue-600 focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z"/>
+      <path d="M20 21c0-4.418-3.582-8-8-8s-8 3.582-8 8"/>
+    </svg>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </button>
+
+       <!-- ACCOUNT DROPDOWN -->
+  <div id="accountDropdown"
+    class="absolute right-0 mt-4 w-52 bg-white border border-gray-200 rounded-xl shadow-lg hidden z-50">
+    <div class="p-4 space-y-3">
+      <a href="#"
+        class="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+        Create Account
+      </a>
+      <a href="#"
+        class="block text-center border border-blue-600 text-blue-600 py-2 rounded-lg
+               hover:bg-blue-600 hover:text-white">
+        Login
+      </a>
+    </div>
+  </div>
+</div>
+
+      <!-- BUTTON -->
+      <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full">
+        Book a service
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<script>
+  const servicesBtn = document.getElementById("servicesBtn");
+  const servicesDropdown = document.getElementById("servicesDropdown");
+  const servicesWrapper = document.getElementById("servicesWrapper");
+
+  const accountBtn = document.getElementById("accountBtn");
+  const accountDropdown = document.getElementById("accountDropdown");
+  const accountWrapper = document.getElementById("accountWrapper");
+
+  function closeAll() {
+    servicesDropdown.classList.add("hidden");
+    accountDropdown.classList.add("hidden");
+  }
+
+  // Toggle Services
+  servicesBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    servicesDropdown.classList.toggle("hidden");
+    accountDropdown.classList.add("hidden");
+  });
+
+  // Toggle Account
+  accountBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    accountDropdown.classList.toggle("hidden");
+    servicesDropdown.classList.add("hidden");
+  });
+
+  // Prevent closing when clicking inside dropdowns
+  servicesWrapper.addEventListener("click", (e) => e.stopPropagation());
+  accountWrapper.addEventListener("click", (e) => e.stopPropagation());
+
+  // Close when clicking outside
+  document.addEventListener("click", closeAll);
+
+  // Optional: close on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeAll();
+  });
+</script>
+
+
+
+
+
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-700 transform -skew-y-3 origin-top-right"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Left -->
+    <div class="bg-white rounded-2xl shadow-2xl p-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Professional Cleaning & Home Services You Can Trust
+      </h1>
+      <ul class="space-y-4 text-lg mb-8">
+        <li class="flex gap-3"><span class="text-green-600">✔</span> Same & next-day availability</li>
+        <li class="flex gap-3"><span class="text-green-600">✔</span> Trained & insured specialists</li>
+        <li class="flex gap-3"><span class="text-green-600">✔</span> Fixed prices & instant booking</li>
+      </ul>
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition">
+          Check Prices & Availability
+        </a>
+        <a href="#" class="border border-gray-300 px-8 py-4 rounded-xl hover:bg-gray-100 transition">
+          Call Us
+        </a>
+      </div>
+      <div class="mt-8 text-sm text-gray-600">
+        ⭐⭐⭐⭐⭐ Rated Excellent by 1,000+ Customers
+      </div>
+    </div>
+    
+    <!-- Right Image -->
+    <div>
+      <img src="hero-cleaning.jpg" alt="Cleaning Service" class="rounded-2xl shadow-2xl">
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between mb-12">
+      <h2 class="text-2xl font-bold">Cleaning Services</h2>
+      <a href="#" class="text-blue-600 font-medium hover:underline transition">
+        View All Services →
+      </a>
+    </div>
+
+   <section class="bg-gray-100 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Deep Cleaning & Laundry</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Carpet Cleaning</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Tiles Cleaning</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Cabros Cleaning</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Kitchen Cleaning</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Curtain Cleaning</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Seat Cleaning</div>
+      <div class="bg-blue-100 py-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition cursor-pointer">Fumigation</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">How Booking Works</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-8 rounded-xl shadow hover:-translate-y-1 hover:shadow-xl transition">
+        <h3 class="font-semibold mb-2">Request a Quote</h3>
+        <p class="text-sm text-gray-700">Tell us what you need.</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow hover:-translate-y-1 hover:shadow-xl transition">
+        <h3 class="font-semibold mb-2">Pick a Date</h3>
+        <p class="text-sm text-gray-700">Choose your preferred time.</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow hover:-translate-y-1 hover:shadow-xl transition">
+        <h3 class="font-semibold mb-2">Enjoy Clean Space</h3>
+        <p class="text-sm text-gray-700">We handle everything.</p>
+      </div>
+      
+      <a href="#" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+        Book Now
+      </a>
+    </div>
+    </div>
+    
+  </div>
+  
+</section>
+<!-- FEATURES -->
+<section class="bg-gray-100 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-bold mb-6">What makes your service Fantastic?</h2>
+
+    <ul class="bg-blue-100 p-6 rounded-lg shadow hover:-translate-y-1 hover:shadow-xl transition space-y-3 max-w-xl">
+      <li>• Same & next-day visits</li>
+      <li>• 7 days-a-week availability</li>
+      <li>• Fixed price & instant quotes</li>
+      <li>• Dedicated specialists</li>
+      <li>• No contracts</li>
+      <li>• Easy booking</li>
+    </ul>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-center mb-12">Clients Testimonials</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Card -->
+      <div
+        class="bg-blue-100 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+        <h3 class="font-semibold mb-3">Joel Njagi</h3>
+        <p class="text-sm text-gray-700 mb-4">
+          Used them for an end of tenancy clean, and they did a fantastic job.
+          It turned out bigger than expected, but they were professional and
+          made sure I got what I wanted.
+        </p>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          Learn More
+        </button>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="bg-blue-100 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+        <h3 class="font-semibold mb-3">Ann Wanjugu</h3>
+        <p class="text-sm text-gray-700 mb-4">
+          Far exceeded my expectations. My gardeners were professional,
+          friendly and very thorough. Front and back garden looked amazing.
+        </p>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          Learn More
+        </button>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="bg-blue-100 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+        <h3 class="font-semibold mb-3">Joseph Okumu</h3>
+        <p class="text-sm text-gray-700 mb-4">
+          Service with a smile. Punctual phone call, cheerful welcome and
+          extremely helpful. Carpets cleaner than I imagined possible.
+        </p>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          Learn More
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-bold mb-4">Always at Your Service, Right Where You Are</h2>
+    <p class="text-gray-700 mb-6">We won’t let your cleaning and maintenance problems get to you.</p>
+    <h3 class="font-semibold mb-4">Main Locations We Serve:</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-md">
+      <span>Kitengela</span>
+      <span>Machakos</span>
+      <span>Kajiado</span>
+      <span>Thika</span>
+      <span>Nairobi</span>
+      <span>Mlolongo</span>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="bg-blue-600 py-20 text-center text-white">
+  <h2 class="text-3xl font-bold mb-8">Ready to Book With Us?</h2>
+  <div class="flex justify-center gap-6 flex-wrap">
+    <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition">
+      Book a Service
+    </a>
+    <a href="#" class="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition">
+      WhatsApp Us
+    </a>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-200 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- DISCOVER -->
+      <div>
+        <h3 class="font-semibold mb-4">Discover</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="#" class="hover:text-blue-600">Universal Club</a></li>
+          <li><a href="#" class="hover:text-blue-600">Gift vouchers</a></li>
+          <li><a href="#" class="hover:text-blue-600">Referral programme</a></li>
+          <li><a href="#" class="hover:text-blue-600">Partnerships</a></li>
+          <li><a href="#" class="hover:text-blue-600">Blog</a></li>
+          <li><a href="#" class="hover:text-blue-600">Service Areas</a></li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+      <div>
+        <h3 class="font-semibold mb-4">Company</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+          <li><a href="#" class="hover:text-blue-600">Reviews</a></li>
+          <li><a href="#" class="hover:text-blue-600">Contact Us</a></li>
+        </ul>
+
+        <h4 class="font-semibold mt-6 mb-3">Terms & Policies</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="#" class="hover:text-blue-600">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-blue-600">Terms of Use</a></li>
+          <li><a href="#" class="hover:text-blue-600">Cookies Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- OUR SERVICES -->
+      <div>
+        <h3 class="font-semibold mb-4">Our Services</h3>
+        <ul class="space-y-2 text-sm text-gray-600 max-h-72 overflow-y-auto pr-2">
+          <li><a href="#" class="hover:text-blue-600">Cleaning Services</a></li>
+          <li><a href="#" class="hover:text-blue-600">Deep Cleaning</a></li>
+          <li><a href="#" class="hover:text-blue-600">Carpet & Upholstery Cleaning</a></li>
+          <li><a href="#" class="hover:text-blue-600">Pest Control & Fumigation</a></li>
+          <li><a href="#" class="hover:text-blue-600">Laundry & Dry Cleaning</a></li>
+          <li><a href="#" class="hover:text-blue-600">Ironing Services</a></li>
+          <li><a href="#" class="hover:text-blue-600">Curtain Cleaning & Steaming</a></li>
+          <li><a href="#" class="hover:text-blue-600">Moving Services</a></li>
+          <li><a href="#" class="hover:text-blue-600">Waste Removal</a></li>
+          <li><a href="#" class="hover:text-blue-600">Office Cleaning</a></li>
+          <li><a href="#" class="hover:text-blue-600">Post Construction Cleaning</a></li>
+        </ul>
+      </div>
+
+      <!-- SUBSCRIBE -->
+      <div>
+        <h3 class="font-semibold mb-4">Subscribe</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Be the first to hear about our exclusive offers and discounts.
+        </p>
+
+        <div class="flex items-center gap-2 mb-6">
+          <input type="email"
+            placeholder="Enter your email..."
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">
+            Subscribe
+          </button>
+        </div>
+
+        <!-- SOCIALS -->
+        <div class="flex gap-3 mb-6">
+          <a href="#" class="social-icon">f</a>
+          <a href="#" class="social-icon">X</a>
+          <a href="#" class="social-icon">P</a>
+          <a href="#" class="social-icon">▶</a>
+          <a href="#" class="social-icon">◎</a>
+          <a href="#" class="social-icon">in</a>
+        </div>
+
+        <!-- APP BADGES (OPTIONAL) -->
+        <div class="flex gap-2">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+               class="h-10" alt="App Store">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+               class="h-10" alt="Google Play">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COUNTRIES -->
+    <div class="mt-16 text-center">
+      <p class="text-sm font-medium mb-4">Where else you can find us</p>
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+        <span>🇰🇪 Kenya</span>
+        <span>🇺🇬 Uganda</span>
+        <span>🇹🇿 Tanzania</span>
+        <span>🇷🇼 Rwanda</span>
+        <span>🇬🇧 United Kingdom</span>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="mt-10 text-center text-sm text-gray-500">
+      © 2026 Universal Cleaners. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
